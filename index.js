@@ -3,6 +3,7 @@
 const removeDuplicate=(str)=>{
  let uniqueStr=[]
  let freq={}
+ let count=0
  const len = str.length;
  for(let i=0;i<len;i++){
 
@@ -16,6 +17,7 @@ const removeDuplicate=(str)=>{
 
     if(!uniqueStr.includes(str[i])){
         uniqueStr.push(str[i])
+        count++
     } 
  }
  console.log(freq)
@@ -24,7 +26,7 @@ const removeDuplicate=(str)=>{
    console.log(freq[key]+key)
  }
 
- console.log(' uniqueStr length:', uniqueStr.length);
+ console.log(' uniqueStr length:', count);
  return uniqueStr.join('')
 }
 
